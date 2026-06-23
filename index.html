@@ -657,7 +657,9 @@
   /* InitiateCheckout: clique em qualquer botão de compra */
   function bindCheckoutEvents() {
     document.querySelectorAll('a[href*="hotmart.com"]').forEach(function(a) {
-      a.addEventListener('click', function() {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        var url = this.href;
         firePixel('InitiateCheckout', {
           content_name:  productData.content_name,
           content_ids:   productData.content_ids,
@@ -666,6 +668,7 @@
           currency:      productData.currency,
           num_items:     1
         });
+        setTimeout(function() { window.open(url, '_blank', 'noopener,noreferrer'); }, 400);
       });
     });
 
