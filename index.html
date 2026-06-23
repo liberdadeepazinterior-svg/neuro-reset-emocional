@@ -660,6 +660,8 @@
       a.addEventListener('click', function(e) {
         e.preventDefault();
         var url = this.href;
+        console.log('INITIATE_CHECKOUT_DISPARADO');
+        console.log('FBQ_EXISTE', typeof fbq);
         firePixel('InitiateCheckout', {
           content_name:  productData.content_name,
           content_ids:   productData.content_ids,
@@ -668,6 +670,7 @@
           currency:      productData.currency,
           num_items:     1
         });
+        console.log('FIREPIXEL_EXECUTOU');
         setTimeout(function() { window.open(url, '_blank', 'noopener,noreferrer'); }, 400);
       });
     });
