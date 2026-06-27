@@ -105,10 +105,6 @@
   <div aria-hidden="true" style="background:var(--secondary);position:absolute;bottom:-10rem;left:-8rem;width:24rem;height:24rem;border-radius:9999px;opacity:0.4;filter:blur(48px);pointer-events:none;"></div>
 
   <div style="position:relative;max-width:48rem;margin:0 auto;text-align:center;">
-    <span style="display:inline-block;border-radius:9999px;border:1px solid var(--border);background:rgba(255,250,247,0.7);padding:0.5rem 1.25rem;font-size:0.75rem;font-weight:500;text-transform:uppercase;letter-spacing:0.18em;color:var(--muted-foreground);backdrop-filter:blur(8px);">
-      Método Neuro Reset Emocional
-    </span>
-
     <h1 style="margin-top:2rem;font-size:clamp(2.1rem, 5.5vw, 3.75rem);line-height:1.1;font-weight:700;color:var(--foreground);font-family:var(--font-serif);">
       E se a sua depressão não for
       <span style="font-style:italic;color:var(--primary);">o verdadeiro problema?</span>
@@ -210,7 +206,7 @@
       <div style="display:grid;gap:2rem;grid-template-columns:1fr;" class="md:grid-cols-2 md:items-center">
         <img src="https://emotional-bloom-lab.lovable.app/assets/etapa-1-Rp-tan8h.jpg"
              alt="Como a neurociência e a neurobiologia explicam o trauma" loading="lazy"
-             style="width:100%;border-radius:1.75rem;object-fit:cover;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
+             style="width:100%;border-radius:1.75rem;object-fit:cover;object-position:center top;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
         <div>
           <span style="font-size:2.5rem;font-weight:700;font-family:var(--font-serif);color:var(--primary);">01</span>
           <h3 style="margin-top:0.5rem;font-size:1.25rem;color:var(--foreground);font-family:var(--font-serif);">Como a neurociência e a neurobiologia explicam o trauma</h3>
@@ -223,7 +219,7 @@
         <div class="md:order-2">
           <img src="https://emotional-bloom-lab.lovable.app/assets/etapa-2-BlZpUnzN.jpg"
                alt="Entender a origem da depressão, da crise de ansiedade e do aperto no peito" loading="lazy"
-               style="width:100%;border-radius:1.75rem;object-fit:cover;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
+               style="width:100%;border-radius:1.75rem;object-fit:cover;object-position:center top;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
         </div>
         <div class="md:order-1">
           <span style="font-size:2.5rem;font-weight:700;font-family:var(--font-serif);color:var(--primary);">02</span>
@@ -236,7 +232,7 @@
       <div style="display:grid;gap:2rem;grid-template-columns:1fr;" class="md:grid-cols-2 md:items-center">
         <img src="https://emotional-bloom-lab.lovable.app/assets/etapa-3-OgVgetzQ.jpg"
              alt="Tornar consciente o que acontece dentro de você" loading="lazy"
-             style="width:100%;border-radius:1.75rem;object-fit:cover;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
+             style="width:100%;border-radius:1.75rem;object-fit:cover;object-position:center top;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
         <div>
           <span style="font-size:2.5rem;font-weight:700;font-family:var(--font-serif);color:var(--primary);">03</span>
           <h3 style="margin-top:0.5rem;font-size:1.25rem;color:var(--foreground);font-family:var(--font-serif);">Tornar consciente o que acontece dentro de você</h3>
@@ -249,7 +245,7 @@
         <div class="md:order-2">
           <img src="https://emotional-bloom-lab.lovable.app/assets/etapa-4-BhZhIyQb.jpg"
                alt="Identificar, reprocessar e neutralizar a dor (Neuro Reset)" loading="lazy"
-               style="width:100%;border-radius:1.75rem;object-fit:cover;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
+               style="width:100%;border-radius:1.75rem;object-fit:cover;object-position:center top;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
         </div>
         <div class="md:order-1">
           <span style="font-size:2.5rem;font-weight:700;font-family:var(--font-serif);color:var(--primary);">04</span>
@@ -262,7 +258,7 @@
       <div style="display:grid;gap:2rem;grid-template-columns:1fr;" class="md:grid-cols-2 md:items-center">
         <img src="https://emotional-bloom-lab.lovable.app/assets/etapa-5-9g55EGa9.jpg"
              alt="Liberta-se e Volte a Viver" loading="lazy"
-             style="width:100%;border-radius:1.75rem;object-fit:cover;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
+             style="width:100%;border-radius:1.75rem;object-fit:cover;object-position:center top;aspect-ratio:16/9;box-shadow:var(--shadow-soft);">
         <div>
           <span style="font-size:2.5rem;font-weight:700;font-family:var(--font-serif);color:var(--primary);">05</span>
           <h3 style="margin-top:0.5rem;font-size:1.25rem;color:var(--foreground);font-family:var(--font-serif);">Liberta-se e Volte a Viver</h3>
@@ -720,8 +716,6 @@
       a.addEventListener('click', function(e) {
         e.preventDefault();
         var url = this.href;
-        console.log('INITIATE_CHECKOUT_DISPARADO');
-        console.log('FBQ_EXISTE', typeof fbq);
         firePixel('InitiateCheckout', {
           content_name:  productData.content_name,
           content_ids:   productData.content_ids,
@@ -730,7 +724,6 @@
           currency:      productData.currency,
           num_items:     1
         });
-        console.log('FIREPIXEL_EXECUTOU');
         setTimeout(function() { window.open(url, '_blank', 'noopener,noreferrer'); }, 400);
       });
     });
