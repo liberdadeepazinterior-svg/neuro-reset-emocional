@@ -734,11 +734,6 @@
           var top = window.pageYOffset + rect.top - (window.innerHeight / 2) + (rect.height / 2);
           window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
         }
-        firePixel('Lead', {
-          content_name: productData.content_name,
-          value:        productData.value,
-          currency:     productData.currency
-        });
       });
     });
   }
